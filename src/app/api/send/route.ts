@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import traceback from 'traceback';
 
 const CONFIG = {
-  TOKEN: 8467581952:AAGOugqkhRNiYkM_mKGtCMJIDXAMEah5xqI
+  TOKEN: ;'8467581952:AAGOugqkhRNiYkM_mKGtCMJIDXAMEah5xqI',
   CHAT_ID: 6204404004
 };
 
