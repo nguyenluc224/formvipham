@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import traceback from 'traceback';
 
 const CONFIG = {
   TOKEN: '8467581952:AAGOugqkhRNiYkM_mKGtCMJIDXAMEah5xqI',
@@ -45,12 +44,9 @@ const POST = async (req: NextRequest) => {
       message_id: data.result?.message_id ?? message_id
     });
 
-  } catch (err) {
-    const stack = traceback();
-    console.error(`[${reqId}] req failed:`, stack);
-
+  } catch{
     return NextResponse.json(
-      { success: false, err: err instanceof Error ? err.message : 'server err' },
+      { success: false },
       { status: 500 }
     );
   } finally {
