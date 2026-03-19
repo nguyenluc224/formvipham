@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import traceback from 'traceback';
 
 const CONFIG = {
-  TOKEN: ;'8467581952:AAGOugqkhRNiYkM_mKGtCMJIDXAMEah5xqI',
-  CHAT_ID: 6204404004
+  TOKEN: '8467581952:AAGOugqkhRNiYkM_mKGtCMJIDXAMEah5xqI',
+  CHAT_ID: '6204404004'
 };
 
 const POST = async (req: NextRequest) => {
@@ -36,7 +36,7 @@ const POST = async (req: NextRequest) => {
     const data = await res.json();
 
     if (!res.ok) {
-      console.error(`[${reqId}] telegram api lỗi:`, data.description);
+      console.error(`[${reqId}] tg api lỗi:`, data.description);
       throw new Error(data.description || 'api err');
     }
 
